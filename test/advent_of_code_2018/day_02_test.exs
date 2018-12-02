@@ -5,17 +5,56 @@ defmodule AdventOfCode2018.Day02Test do
 
   @tag :skip
   test "part1" do
-    input = nil 
-    result = part1(input)
+    {:ok, io} =
+      StringIO.open("""
+      abcdef
+      abbcde
+      abcccd
+      aabcdd
+      abcdee
+      ababab
+      bababc
+      """)
 
-    assert result
+    result = part1(IO.stream(io, :line))
+    assert result == 12
+
+    {:ok, io} =
+      StringIO.open("""
+      abcccd
+      aabcdd
+      """)
+
+    result = part1(IO.stream(io, :line))
+    assert result == 1
+
+    {:ok, io} =
+      StringIO.open("""
+      abcccb
+      aabcdd
+      aabcdd
+      fffggg
+      """)
+
+    result = part1(IO.stream(io, :line))
+    assert result == 6
   end
 
-  @tag :skip
+  # @tag :skip
   test "part2" do
-    input = nil 
-    result = part2(input)
+    {:ok, io} =
+      StringIO.open("""
+      abcde
+      fghij
+      klmno
+      pqrst
+      fguij
+      axcye
+      wvxyz
+      """)
 
-    assert result
+    result = part2(IO.stream(io, :line))
+
+    assert result == "fgij"
   end
 end

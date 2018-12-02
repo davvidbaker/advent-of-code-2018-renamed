@@ -3,6 +3,7 @@ defmodule AdventOfCode2018.Day01 do
     args |> Enum.map(&String.to_integer(&1)) |> Enum.sum()
   end
 
+  # 💁 this is super slow
   def part2(args) do
     frequency_changes = args |> Enum.map(&String.to_integer(&1))
 
@@ -12,6 +13,7 @@ defmodule AdventOfCode2018.Day01 do
   def my_func(frequencies, frequency_changes, original_frequency_changes, iteration) do
     new_freq = List.last(frequencies) + List.first(frequency_changes)
 
+    # ⚠️ This is probably the biggest culprit
     new_frequencies = frequencies ++ [new_freq]
 
     last_frequency = List.last(new_frequencies)
