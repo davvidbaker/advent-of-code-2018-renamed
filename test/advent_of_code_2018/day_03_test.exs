@@ -5,17 +5,28 @@ defmodule AdventOfCode2018.Day03Test do
 
   @tag :skip
   test "part1" do
-    input = nil 
-    result = part1(input)
+    {:ok, io} =
+      StringIO.open("""
+      #1 @ 1,3: 4x4
+      #2 @ 3,1: 4x4
+      #3 @ 5,5: 2x2
+      """)
 
-    assert result
+    result = part1(IO.stream(io, :line))
+
+    assert result == 4
   end
 
-  @tag :skip
+  # @tag :skip
   test "part2" do
-    input = nil 
-    result = part2(input)
+    {:ok, io} =
+      StringIO.open("""
+      #1 @ 1,3: 4x4
+      #2 @ 3,1: 4x4
+      #3 @ 5,5: 2x2
+      """)
 
-    assert result
+    result = part2(IO.stream(io, :line))
+    assert result == "3"
   end
 end
