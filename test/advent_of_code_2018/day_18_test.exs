@@ -5,16 +5,16 @@ defmodule AdventOfCode2018.Day18Test do
 
   @tag :skip
   test "part1" do
-    input = nil 
-    result = part1(input)
+    {:ok, io} = StringIO.open()
+    result = part1(IO.stream(io, :line))
 
     assert result
   end
 
   @tag :skip
   test "part2" do
-    input = nil 
-    result = part2(input)
+    {:ok, io} = StringIO.open()
+    result = part2(IO.stream(io, :line))
 
     assert result
   end
