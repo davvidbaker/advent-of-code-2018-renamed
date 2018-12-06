@@ -107,12 +107,6 @@ defmodule AdventOfCode2018.Day06 do
     |> Enum.with_index()
     |> Enum.reduce({big_number, 0}, fn {distance, index}, {min_distance, coord_index} = acc ->
       if distance == min_distance do
-        IO.puts("\n")
-        IO.puts("\n{x, y}")
-        IO.inspect({x, y})
-        IO.puts("\ndistance in dispute")
-        IO.inspect(distance)
-
         {min_distance, nil}
       else
         if distance < min_distance do
