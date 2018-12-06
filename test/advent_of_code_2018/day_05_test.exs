@@ -26,7 +26,7 @@ defmodule AdventOfCode2018.Day05Test do
     assert result == "dabCBAcaDA"
   end
 
-  # @tag :skip
+  @tag :skip
   test "part2" do
     {:ok, io} = StringIO.open("dabAcCaCBAcCcaDA")
     result = part2(IO.stream(io, :line))
