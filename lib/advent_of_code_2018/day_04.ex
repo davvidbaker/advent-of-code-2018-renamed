@@ -35,8 +35,6 @@ defmodule AdventOfCode2018.Day04 do
   defp compute_guard_score({id, minute_map, minutes_asleep}) do
     id = String.to_integer(id)
 
-    minute_map |> Map.to_list() |> Enum.sort_by(fn {a, _b} -> a end) |> Enum.map(&IO.inspect(&1))
-
     {max_minute, _times_asleep} =
       minute_map
       |> Map.to_list()

@@ -3,7 +3,7 @@ defmodule AdventOfCode2018.Day04Test do
 
   import AdventOfCode2018.Day04
 
-  # @tag :skip
+  @tag :skip
   test "part1" do
     {:ok, io} =
       StringIO.open("""
@@ -31,7 +31,7 @@ defmodule AdventOfCode2018.Day04Test do
     assert result == 240
   end
 
-  # @tag :skip
+  @tag :skip
   test "part2" do
     {:ok, io} =
       StringIO.open("""

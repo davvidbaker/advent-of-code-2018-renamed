@@ -17,7 +17,7 @@ defmodule AdventOfCode2018.Day03Test do
     assert result == 4
   end
 
-  # @tag :skip
+  @tag :skip
   test "part2" do
     {:ok, io} =
       StringIO.open("""
