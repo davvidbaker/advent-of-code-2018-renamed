@@ -20,7 +20,7 @@ defmodule AdventOfCode2018.Day06Test do
     assert result == 17
   end
 
-  # @tag :skip
+  @tag :skip
   test "part2" do
     {:ok, io} =
       StringIO.open("""
