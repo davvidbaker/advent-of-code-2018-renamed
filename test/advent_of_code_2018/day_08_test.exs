@@ -3,7 +3,7 @@ defmodule AdventOfCode2018.Day08Test do
 
   import AdventOfCode2018.Day08
 
-  # @tag :skip
+  @tag :skip
   test "part1" do
     {:ok, io} =
       StringIO.open("""
@@ -15,7 +15,7 @@ defmodule AdventOfCode2018.Day08Test do
     assert result == 138
   end
 
-  # @tag :skip
+  @tag :skip
   test "part2" do
     {:ok, io} =
       StringIO.open("""

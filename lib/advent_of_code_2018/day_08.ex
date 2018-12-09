@@ -1,4 +1,4 @@
-defmodule Node do
+defmodule Day8Node do
   defstruct(meta: [], children: [])
 end
 
@@ -25,7 +25,7 @@ defmodule AdventOfCode2018.Day08 do
       children ->
         node.meta
         |> Enum.map(fn child_index ->
-          Enum.at(children, child_index - 1, %Node{children: [], meta: [0]})
+          Enum.at(children, child_index - 1, %Day8Node{children: [], meta: [0]})
           |> compute_value_of_node
         end)
         |> Enum.sum()
@@ -48,7 +48,7 @@ defmodule AdventOfCode2018.Day08 do
       end)
 
     {meta, tail} = Enum.split(tail, num_meta)
-    node = %Node{children: Enum.reverse(children), meta: meta}
+    node = %Day8Node{children: Enum.reverse(children), meta: meta}
 
     {node, tail}
   end
