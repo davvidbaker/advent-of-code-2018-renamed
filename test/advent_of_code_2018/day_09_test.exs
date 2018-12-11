@@ -12,12 +12,4 @@ defmodule AdventOfCode2018.Day09Test do
     assert part1(21, 6111) == 54718
     assert part1(30, 5807) == 37305
   end
-
-  @tag :skip
-  test "part2" do
-    {:ok, io} = StringIO.open()
-    result = part2(IO.stream(io, :line))
-
-    assert result
-  end
 end

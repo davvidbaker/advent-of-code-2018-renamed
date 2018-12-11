@@ -3,12 +3,9 @@ defmodule Mix.Tasks.D09.P2 do
 
   import AdventOfCode2018.Day09
 
-  @shortdoc "Day 09 Part 2"
+  @shortdoc "Day 09 Part "
   def run(_) do
-    input = nil
-
-    input
-    |> part2() 
-    |> IO.inspect(label: "Part 2 Results") 
+    part2(416, 71975)
+    |> IO.inspect(label: "Part 1 Results")
   end
-end   
+end
