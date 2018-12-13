@@ -3,7 +3,7 @@ defmodule AdventOfCode2018.Day11Test do
 
   import AdventOfCode2018.Day11
 
-  # @tag :skip
+  @tag :skip
   test "part1" do
     result = part1(18)
     assert result == {33, 45}
