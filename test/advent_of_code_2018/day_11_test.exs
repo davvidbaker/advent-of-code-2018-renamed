@@ -3,19 +3,21 @@ defmodule AdventOfCode2018.Day11Test do
 
   import AdventOfCode2018.Day11
 
-  @tag :skip
+  # @tag :skip
   test "part1" do
-    {:ok, io} = StringIO.open()
-    result = part1(IO.stream(io, :line))
+    result = part1(18)
+    assert result == {33, 45}
 
-    assert result
+    result = part1(42)
+    assert result == {21, 61}
   end
 
   @tag :skip
   test "part2" do
-    {:ok, io} = StringIO.open()
-    result = part2(IO.stream(io, :line))
+    result = part2(18)
+    assert result == {90, 269, 16}
 
-    assert result
+    result = part2(42)
+    assert result == {232, 251, 12}
   end
 end

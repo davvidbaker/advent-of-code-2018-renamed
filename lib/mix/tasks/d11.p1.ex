@@ -5,10 +5,10 @@ defmodule Mix.Tasks.D11.P1 do
 
   @shortdoc "Day 11 Part 1"
   def run(_) do
-    input = nil
+    input = 1723
 
     input
     |> part1()
-    |> IO.inspect(label: "Part 1 Results") 
+    |> IO.inspect(label: "Part 1 Results")
   end
-end   
+end

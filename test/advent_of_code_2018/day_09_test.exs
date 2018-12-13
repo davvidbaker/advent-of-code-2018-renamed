@@ -3,7 +3,7 @@ defmodule AdventOfCode2018.Day09Test do
 
   import AdventOfCode2018.Day09
 
-  # @tag :skip
+  @tag :skip
   test "part1" do
     assert part1(9, 25) == 32
     assert part1(10, 1618) == 8317
